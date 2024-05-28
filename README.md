@@ -31,7 +31,7 @@
 
 <p align="center">
   	<b>
-    [<a href="https://xxx">ArXiv</a>] | [<a href="https://huggingface.co/datasets/LightChen2333/M3CoT">🤗HuggingFace</a>] | [<a href="https://lightchen233.github.io/m3cot.github.io/">Website</a>]
+    [<a href="https://arxiv.org/abs/2405.16473">ArXiv</a>] | [<a href="https://huggingface.co/datasets/LightChen2333/M3CoT">🤗HuggingFace</a>] | [<a href="https://lightchen233.github.io/m3cot.github.io/">Website</a>]
     </b>
     <br />
 </p>
@@ -41,7 +41,7 @@
 ## 🔥News
 - 🎖️ **Our work is accepted by ACL2024.**
 - 🔥 **We have release benchmark on \[[🤗HuggingFace](https://huggingface.co/datasets/LightChen2333/M3CoT)\].**
-- 🔥 **The paper is also available on \[[ArXiv](https://xxx)\].**
+- 🔥 **The paper is also available on \[[ArXiv](https://arxiv.org/abs/2405.16473)\].**
 
 - 🔮 **Interactive benchmark website \& more exploration are available on \[[https://lightchen233.github.io/m3cot.github.io/](https://lightchen233.github.io/m3cot.github.io/)\].**
 ## 💡 Motivation
