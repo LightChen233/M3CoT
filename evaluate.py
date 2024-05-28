@@ -58,7 +58,8 @@ def run(setting, model, prompt, print_latex_format=False,
         metric_by= "topic", # ["topic", "domain", "all"]
         metric_path=None
         ):
-    m3qa = M3CoT()
+    dataset = datasets.load_dataset("data/m3cot.py")
+    m3cot = M3CoT(dataset=dataset)
     if setting == "custom":
         if metric_path is None:
             ValueError("No evaluation path has been specified yet. Please use `--metric_path` to specify the path")
@@ -68,8 +69,8 @@ def run(setting, model, prompt, print_latex_format=False,
         metric_path = metric_setting.get_dir(setting, model, prompt)
         metric_data = MetricData(metric_path +".jsonl")
 
-    m3qa.select_by_split("test")
-    res = metric_data.metric(by=metric_by, map=m3qa)
+    m3cot.select_by_split("test")
+    res = metric_data.metric(by=metric_by, map=m3cot)
     res_str = ""
     print(res)
     if metric_by == "topic":
@@ -86,7 +87,7 @@ def run(setting, model, prompt, print_latex_format=False,
             tb.add_row([domain, f"{res[domain]['acc']*100.0:.2f}"])
             res_str += f"{res[domain]['acc']*100.0:.2f} & "
         print(tb)
-    res = metric_data.metric(by="all", map=m3qa)["total"]
+    res = metric_data.metric(by="all", map=m3cot)["total"]
     res_str += f'{res["acc"]*100.0:.2f}'
     if print_latex_format:
         print(res_str.strip(","))
