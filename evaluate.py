@@ -8,6 +8,7 @@ Description:
 '''
 import os
 
+import datasets
 import fire
 from prettytable import PrettyTable
 from utils.data import M3CoT
