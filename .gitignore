@@ -18,3 +18,5 @@ zero_shot_code/*
 mmcot_code/*
 load_dataset.py
 merge.py
+experiment/ZiDongTaiChu_M3CoT.jsonl
+.vscode/settings.json

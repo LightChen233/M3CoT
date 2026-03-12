@@ -55,11 +55,11 @@ class MetricSetting():
             setting_path = f"{self.base_dir}/{setting}/{model}/{prompt}"
         
         return setting_path
-def run(setting, model, prompt, print_latex_format=False,
+def run(setting, model=None, prompt=None, print_latex_format=False,
         metric_by= "topic", # ["topic", "domain", "all"]
         metric_path=None
         ):
-    dataset = datasets.load_dataset("data/m3cot.py")
+    dataset = datasets.load_dataset("LightChen2333/M3CoT")
     m3cot = M3CoT(dataset=dataset)
     if setting == "custom":
         if metric_path is None:

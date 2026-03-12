@@ -50,7 +50,7 @@ class M3CoT():
                         obj["image"].save(f"data/images/{obj['id']}.png", 'PNG')
                     data_list.append(obj)
         else:
-            for sp in ["train", "dev", "test"]:
+            for sp in ["train", "validation", "test"]:
                 obj_list = dataset[sp]
                 for obj in obj_list:
                     data_list.append(obj)
